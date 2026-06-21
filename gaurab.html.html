@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurab — Ultimate High-Fidelity Creative Engineering Grid Archive</title>
+    
+    <!-- Premium Editorial Font Pairing Architecture -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================================
+           1. CORE CORE COLOR TOKENS & SYSTEM VARIABLES
+           ========================================================================= */
+        :root {
+            /* Molten Cocoa Color Matrix */
+            --bg-chocolate-deep: #0e0605;   
+            --bg-chocolate-mid: #170c09;
+            --milk-chocolate: #26130e;      
+            --cream-silk: #fdfaf7;          
+            --gold-accent: #dfb73c;         
+            --text-muted: rgba(253, 250, 247, 0.45);
+            --border-luxury: rgba(253, 250, 247, 0.07);
+            
+            /* Typography Scales */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-display: 'Syne', sans-serif;
+            
+            /* Structural Transitions & Bezier Paths */
+            --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-fluid: cubic-bezier(0.85, 0, 0.15, 1);
+            --transition-slow: 1.4s;
+            --transition-normal: 0.6s;
+        }
+
+        /* =========================================================================
+           2. UNIVERSAL HARDWARE-ACCELERATED RESET
+           ========================================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background: var(--bg-chocolate-deep);
+            color: var(--cream-silk);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+
+        /* Custom Premium Scrollbar Profile */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-chocolate-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--milk-chocolate);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-accent);
+        }
+
+        /* =========================================================================
+           3. LUXURY CUSTOM ENGINE CURSOR LAYER
+           ========================================================================= */
+        .custom-cursor-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--gold-accent);
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s var(--ease-luxury), height 0.3s var(--ease-luxury), background-color 0.3s var(--ease-luxury);
+            will-change: transform;
+        }
+
+        .custom-cursor-ring {
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(223, 183, 60, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            will-change: transform;
+        }
+
+        /* Interactive Cursor Hover States Mapping to Interactive Element Triggers */
+        body.is-hovering-interactive .custom-cursor-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--cream-silk);
+        }
+
+        body.is-hovering-interactive .custom-cursor-ring {
+            width: 54px;
+            height: 54px;
+            border-color: var(--gold-accent);
+            background-color: rgba(223, 183, 60, 0.03);
+        }
+
+        /* =========================================================================
+           4. BACKGROUND VECTOR WAVE SIMULATION CANVAS FRAME
+           ========================================================================= */
+        #chocolate-flow-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.85;
+            will-change: transform;
+        }
+
+        .vignette-shadow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, transparent 20%, rgba(14, 6, 5, 0.98) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* =========================================================================
+           5. GLOBAL STRUCTURAL MASTHEAD
+           ========================================================================= */
+        .master-layout-container {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+
+        /* =========================================================================
+           6. FIXED EDITORIAL NAVIGATION STAMP BAR
+           ========================================================================= */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 45px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(14, 6, 5, 0.9), transparent);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(253, 250, 247, 0.02);
+        }
+
+        .brand-logo {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: 6px;
+            color: var(--cream-silk);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .brand-logo span {
+            color: var(--gold-accent);
+            font-style: italic;
+        }
+
+        .nav-meta-block {
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .nav-stamp-item {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-link-btn {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid rgba(223, 183, 60, 0.25);
+            padding: 12px 24px;
+            transition: all 0.4s var(--ease-luxury);
+        }
+
+        .nav-link-btn:hover {
+            background: var(--gold-accent);
+            color: var(--bg-chocolate-deep);
+            border-color: var(--gold-accent);
+        }
+
+        /* =========================================================================
+           7. SYSTEM REVEAL STRUCTURAL TYPOGRAPHY (SCROLL ANIMATION DRIVERS)
+           ========================================================================= */
+        .reveal-parent {
+            overflow: hidden;
+            display: block;
+        }
+
+        .reveal-child {
+            display: block;
+            transform: translateY(105%);
+            transition: transform 1.2s var(--ease-luxury);
+            will-change: transform;
+        }
+
+        .reveal-child.is-triggered-visible {
+            transform: translateY(0%);
+        }
+
+        /* =========================================================================
+           8. HERO HIGH-FIDELITY IMMERSIVE PRESENTATION LAYER
+           ========================================================================= */
+        .hero-section {
+            height: 100vh;
+            width: 100%;
+            padding: 0 6%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-title-group {
+            max-width: 1300px;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.7rem;
+            color: var(--gold-accent);
+            margin-bottom: 25px;
+            display: block;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: luxuryInstantFade 1.6s var(--ease-luxury) forwards 0.2s;
+        }
+
+        .hero-heading {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 8.5vw, 9rem);
+            font-weight: 800;
+            line-height: 0.85;
+            letter-spacing: -4px;
+            text-transform: uppercase;
+            color: var(--cream-silk);
+        }
+
+        .hero-heading span {
+            font-family: var(--font-serif);
+            font-weight: 300;
+            text-transform: none;
+            font-style: italic;
+            letter-spacing: 1px;
+            display: block;
+            color: rgba(253, 250, 247, 0.85);
+            margin-top: 15px;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 60px;
+            left: 6%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+        }
+
+        .scroll-line {
+            width: 60px;
+            height: 1px;
+            background: rgba(253, 250, 247, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gold-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: lineAnimateLoop 2.2s infinite linear;
+        }
+
+        /* =========================================================================
+           9. EDITORIAL MANIFESTO SECTION (THE CORE INSIGHT LAYER)
+           ========================================================================= */
+        .manifesto-section {
+            padding: 28vh 6%;
+            border-top: 1px solid var(--border-luxury);
+            background: linear-gradient(to bottom, transparent, rgba(23, 12, 9, 0.3));
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 8%;
+            align-items: top;
+        }
+
+        .manifesto-sticky-pane {
+            position: sticky;
+            top: 180px;
+        }
+
+        .meta-index-stamp {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.35rem;
+            color: var(--gold-accent);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .manifesto-title {
+            font-family: var(--font-display);
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--cream-silk);
+        }
+
+        .manifesto-body-wrapper {
+            max-width: 900px;
+        }
+
+        .manifesto-core-paragraph {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 3.8vw, 3.5rem);
+            line-height: 1.25;
+            font-weight: 300;
+            color: #ece5e0;
+            margin-bottom: 60px;
+        }
+
+        .manifesto-core-paragraph span {
+            color: var(--gold-accent);
+            font-weight: 500;
+        }
+
+        .manifesto-secondary-details {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: rgba(253, 250, 247, 0.65);
+            font-weight: 300;
+            max-width: 700px;
+        }
+
+        /* =========================================================================
+           10. THE EXPANDED SUB-TOPICS ROW SYSTEM (THE ACCORDIONS MATRIX BOSS)
+           ========================================================================= */
+        .interactive-showcase-section {
+            padding: 18vh 6%;
+            border-top: 1px solid var(--border-luxury);
+            background: rgba(14, 6, 5, 0.4);
+        }
+
+        .section-header-block {
+            margin-bottom: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--border-luxury);
+            padding-bottom: 35px;
+        }
+
+        .section-title-main {
+            font-family: var(--font-display);
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section-title-main span {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 300;
+            text-transform: none;
+            color: var(--gold-accent);
+            margin-left: 15px;
+        }
+
+        .section-desc-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            max-width: 340px;
+            text-align: right;
+            line-height: 1.6;
+        }
+
+        /* Accordion Core Array Wrapper */
+        .master-accordion-system {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .luxury-accordion-node {
+            border-bottom: 1px solid rgba(253, 250, 247, 0.06);
+            transition: background-color 0.6s var(--ease-luxury), border-color 0.6s var(--ease-luxury);
+        }
+
+        .luxury-accordion-node:hover {
+            background-color: rgba(38, 19, 14, 0.12);
+        }
+
+        .accordion-interactive-trigger {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 50px 35px;
+            display: grid;
+            grid-template-columns: 80px 2fr 1fr 50px;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            transition: padding-left 0.6s var(--ease-luxury);
+        }
+
+        .luxury-accordion-node:hover .accordion-interactive-trigger {
+            padding-left: 50px;
+        }
+
+        .node-index {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold-accent);
+            letter-spacing: 2px;
+        }
+
+        .node-headline {
+            font-family: var(--font-serif);
+            font-size: clamp(1.6rem, 2.3vw, 2.5rem);
+            color: var(--cream-silk);
+            font-weight: 400;
+            transition: color 0.4s var(--ease-luxury), transform 0.4s var(--ease-luxury);
+        }
+
+        .luxury-accordion-node:hover .node-headline {
+            color: var(--gold-accent);
+            transform: translateX(5px);
+        }
+
+        .node-category-tag {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .node-icon-indicator {
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(253, 250, 247, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--cream-silk);
+            position: relative;
+            transition: all 0.6s var(--ease-luxury);
+        }
+
+        .luxury-accordion-node:hover .node-icon-indicator {
+            border-color: var(--gold-accent);
+            color: var(--gold-accent);
+            background: rgba(223, 183, 60, 0.04);
+        }
+
+        .node-icon-indicator::before,
+        .node-icon-indicator::after {
+            content: '';
+            position: absolute;
+            background: currentColor;
+            transition: transform 0.5s var(--ease-fluid);
+        }
+
+        .node-icon-indicator::before {
+            width: 12px;
+            height: 1px;
+        }
+        
+        .node-icon-indicator::after {
+            width: 1px;
+            height: 12px;
+        }
+
+        /* Dynamic Panel Expand/Collapse System */
+        .node-expandable-content-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s var(--ease-fluid);
+            will-change: max-height;
+        }
+
+        .node-content-internal-box {
+            padding: 0 35px 55px 115px;
+            max-width: 950px;
+        }
+
+        .node-extended-description {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: rgba(253, 250, 247, 0.8);
+            font-weight: 300;
+            margin-bottom: 35px;
+        }
+
+        /* Blueprint Specifications Architecture Grid inside Expanded States */
+        .node-technical-matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            border-top: 1px solid rgba(253, 250, 247, 0.04);
+            padding-top: 35px;
+            margin-top: 25px;
+        }
+
+        .matrix-data-node h4 {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-accent);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .matrix-data-node p {
+            font-size: 0.85rem;
+            color: rgba(253, 250, 247, 0.55);
+            line-height: 1.6;
+        }
+
+        /* Expansion Mechanics Classes */
+        .luxury-accordion-node.is-expanded-state {
+            background-color: rgba(38, 19, 14, 0.22);
+            border-bottom-color: var(--gold-accent);
+        }
+
+        .luxury-accordion-node.is-expanded-state .node-icon-indicator::after {
+            transform: rotate(90deg) scale(0);
+        }
+
+        .luxury-accordion-node.is-expanded-state .node-icon-indicator::before {
+            transform: rotate(180deg);
+        }
+
+        .luxury-accordion-node.is-expanded-state .node-headline {
+            color: var(--gold-accent);
+        }
+
+        /* =========================================================================
+           11. ASYMMETRIC CHRONICLE PICTURE GALLERY PRESENTATION
+           ========================================================================= */
+        .curated-gallery-showcase {
+            padding: 22vh 6%;
+            border-top: 1px solid var(--border-luxury);
+        }
+
+        .gallery-asymmetric-grid {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 140px;
+            align-items: center;
+        }
+
+        .gallery-large-image-column {
+            position: relative;
+        }
+
+        .gallery-image-frame {
+            width: 100%;
+            height: 78vh;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            box-shadow: 0 45px 160px rgba(0,0,0,0.65);
+            position: relative;
+        }
+
+        .gallery-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(18%) contrast(1.05) brightness(0.82);
+            transition: transform 3s var(--ease-luxury), filter 2.5s var(--ease-luxury);
+            transform: scale(1.01);
+        }
+
+        .gallery-image-frame:hover img {
+            transform: scale(1.07);
+            filter: sepia(0%) contrast(1) brightness(1);
+        }
+
+        .gallery-small-text-column {
+            padding-right: 8%;
+        }
+
+        .gallery-caption-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 25px;
+        }
+
+        .gallery-caption-body {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: rgba(253, 250, 247, 0.6);
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .gallery-action-link {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold-accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .gallery-action-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--gold-accent);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s var(--ease-luxury);
+        }
+
+        .gallery-action-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* =========================================================================
+           12. TRACKING NUMERICAL METRICS SCOREBOARD STRIP
+           ========================================================================= */
+        .numerical-statistics-strip {
+            padding: 130px 6%;
+            border-top: 1px solid var(--border-luxury);
+            border-bottom: 1px solid var(--border-luxury);
+            background: rgba(23, 12, 9, 0.2);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 45px;
+            text-align: center;
+        }
+
+        .stat-node-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-large-number {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4.8rem);
+            font-weight: 700;
+            color: var(--gold-accent);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .stat-label-text {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* =========================================================================
+           13. EXPERIMENTAL LABS HUB (BOUTIQUE SECONDARY LAYER)
+           ========================================================================= */
+        .experimental-hub-section {
+            padding: 22vh 6%;
+            background: linear-gradient(to bottom, transparent, #090302);
+        }
+
+        .hub-asymmetric-presentation-deck {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 45px;
+            margin-top: 65px;
+        }
+
+        .hub-interactive-item-card {
+            background: rgba(23, 12, 9, 0.25);
+            border: 1px solid var(--border-luxury);
+            padding: 55px 45px;
+            transition: all 0.6s var(--ease-luxury);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hub-interactive-item-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s var(--ease-luxury);
+        }
+
+        .hub-interactive-item-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(223, 183, 60, 0.35);
+            background: rgba(38, 19, 14, 0.25);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.45);
+        }
+
+        .hub-interactive-item-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .hub-card-index {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--gold-accent);
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        .hub-card-title {
+            font-family: var(--font-serif);
+            font-size: 1.85rem;
+            font-weight: 400;
+            color: var(--cream-silk);
+            margin-bottom: 20px;
+        }
+
+        .hub-card-abstract {
+            font-size: 0.85rem;
+            line-height: 1.75;
+            color: rgba(253, 250, 247, 0.5);
+            font-weight: 300;
+        }
+
+        /* =========================================================================
+           14. CONSOLE FORM DATA TRANSMISSION MODULE
+           ========================================================================= */
+        .communications-intake-section {
+            padding: 22vh 6%;
+            border-top: 1px solid var(--border-luxury);
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: 12%;
+        }
+
+        .intake-sidebar-sticky {
+            position: sticky;
+            top: 180px;
+        }
+
+        .intake-title-main {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -1px;
+            margin-bottom: 35px;
+        }
+
+        .intake-title-main span {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 300;
+            text-transform: none;
+            color: var(--gold-accent);
+        }
+
+        .intake-comms-channel-list {
+            margin-top: 55px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .channel-row-node {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .channel-row-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .channel-row-anchor {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            color: var(--cream-silk);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .channel-row-anchor:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Intricate Input Elements Base Tree */
+        .intake-form-element-tree {
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+        }
+
+        .form-structural-node-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .form-input-wrapper-node {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .luxury-form-label-string {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .luxury-monolithic-input-field {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(253, 250, 247, 0.12);
+            padding: 20px 0;
+            color: var(--cream-silk);
+            font-family: var(--font-serif);
+            font-size: 1.55rem;
+            font-weight: 300;
+            transition: border-color 0.5s var(--ease-luxury);
+            border-radius: 0;
+        }
+
+        .luxury-monolithic-input-field:focus {
+            outline: none;
+            border-bottom-color: var(--gold-accent);
+        }
+
+        textarea.luxury-monolithic-input-field {
+            min-height: 150px;
+            resize: none;
+        }
+
+        .submission-trigger-container {
+            padding-top: 25px;
+        }
+
+        .premium-form-submit-trigger {
+            background: transparent;
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 25px 60px;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.6s var(--ease-luxury);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .premium-form-submit-trigger::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gold-accent);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.5s var(--ease-luxury);
+            z-index: -1;
+        }
+
+        .premium-form-submit-trigger:hover {
+            color: var(--bg-chocolate-deep);
+            box-shadow: 0 25px 65px rgba(223, 183, 60, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .premium-form-submit-trigger:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
+        }
+
+        /* =========================================================================
+           15. STUDIO MATTE COCOA SYSTEM FOOTER
+           ========================================================================= */
+        footer {
+            padding: 90px 6%;
+            border-top: 1px solid var(--border-luxury);
+            background: #070302;
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+
+        .footer-top-row-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-brand-column h3 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand-column p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            max-width: 340px;
+            line-height: 1.65;
+        }
+
+        .footer-links-navigation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 90px;
+        }
+
+        .footer-nav-col-header {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold-accent);
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+
+        .footer-nav-link-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-nav-link-list a {
+            font-size: 0.85rem;
+            color: rgba(253, 250, 247, 0.55);
+            text-decoration: none;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .footer-nav-link-list a:hover {
+            color: var(--gold-accent);
+            padding-left: 6px;
+        }
+
+        .footer-bottom-compliance-row {
+            border-top: 1px solid rgba(253, 250, 247, 0.03);
+            padding-top: 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+        }
+
+        /* =========================================================================
+           16. CORE STATIC CSS ANIMATION RULES
+           ========================================================================= */
+        @keyframes luxuryInstantFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes lineAnimateLoop {
+            0% {
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+            49% {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+            50% {
+                transform: scaleX(1);
+                transform-origin: right;
+            }
+            100% {
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+        }
+
+        
+        .bio-section {
+            padding: 22vh 6%;
+            border-top: 1px solid var(--border-luxury);
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 8%;
+        }
+
+        .bio-sticky-pane {
+            position: sticky;
+            top: 180px;
+        }
+
+        .bio-content {
+            max-width: 900px;
+        }
+
+/* =========================================================================
+           17. EXPERT RESPONSIVE MEDIA BREAKPOINT ARCHITECTURE
+           ========================================================================= */
+        @media (max-width: 1300px) {
+            .manifesto-section, .communications-intake-section {
+                grid-template-columns: 1fr;
+                gap: 70px;
+            }
+            .manifesto-sticky-pane, .intake-sidebar-sticky {
+                position: relative;
+                top: 0;
+            }
+            .gallery-asymmetric-grid {
+                grid-template-columns: 1fr;
+                gap: 70px;
+            }
+            .accordion-interactive-trigger {
+                grid-template-columns: 60px 1fr 40px;
+            }
+            .node-category-tag {
+                display: none;
+            }
+            .node-content-internal-box {
+                padding-left: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 35px 4%; }
+            .nav-stamp-item, .custom-cursor-dot, .custom-cursor-ring { display: none !important; }
+            .hero-section, .manifesto-section, .interactive-showcase-section, .curated-gallery-showcase, .experimental-hub-section, .communications-intake-section, footer {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            .numerical-statistics-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+            .hub-asymmetric-presentation-deck {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .form-structural-node-row {
+                grid-template-columns: 1fr;
+                gap: 65px;
+            }
+            .node-technical-matrix-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .footer-top-row-layout {
+                flex-direction: column;
+                gap: 55px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LUXURY CUSTOM ENGRAVED HARDWARE ENGINE CURSORS -->
+    <div class="custom-cursor-dot" id="cursor-dot-node"></div>
+    <div class="custom-cursor-ring" id="cursor-ring-node"></div>
+
+    <!-- CANVAS WAVES BACKGROUND SIMULATION FRAMEWORK -->
+    <canvas id="chocolate-flow-canvas"></canvas>
+    <div class="vignette-shadow"></div>
+
+    <!-- MAIN ROOT GLOBAL ARCHITECTURE CONTAINER CONTAINER -->
+    <div class="master-layout-container">
+
+        <!-- GLOBAL ANCHOR HEADER NAVIGATION -->
+        <nav>
+            
+            <a href="#" class="brand-logo trigger-interactive-focus" id="ui-anchor-logo">GAURAB<span>.</span></a>
+            <div class="nav-meta-block">
+                <span class="nav-stamp-item">Structural Nexus // v3.00</span>
+                <span class="nav-stamp-item">Premium Vector Codex</span>
+                <a href="#contact-intake-anchor" class="nav-link-btn trigger-interactive-focus">Initiate Brief</a>
+            </div>
+        </nav>
+
+<section class="bio-section">
+    <div class="bio-grid">
+        <div class="bio-sticky-pane">
+            <span class="meta-index-stamp">00 — Biography</span>
+            <h2 class="manifesto-title">The Architect</h2>
+        </div>
+        <div class="bio-content">
+            <p class="manifesto-core-paragraph">
+                I am <span>Gaurab</span>, a creative engineer obsessed with the intersection of high-fidelity aesthetics and functional code.
+            </p>
+            <p class="manifesto-secondary-details">
+                I am a Creative Engineer dedicated to the synthesis of rigorous logic and elevated design. My work lives at the intersection of high-performance architecture and immersive digital experience. I don't just build interfaces; I architect visual systems that demand attention and perform with precision. Driven by the philosophy that technology should be as poetic as it is functional, I specialize in crafting digital archives that challenge the status quo, turning raw code into high-fidelity narrative environments.
+            </p>
+        </div>
+    </div>
+</section>
+
+        <!-- IMMERSIVE MAIN STAGE HERO PRESENTATION DISPLAY -->
+        <section class="hero-section">
+            <div class="hero-title-group">
+                <span class="hero-eyebrow">Creative Engineering Portfolio Archive</span>
+                <h1 class="hero-heading">
+                    <span class="reveal-parent"><span class="reveal-child core-autoload-text">Design Matrix</span></span>
+                    <span class="reveal-parent"><span class="reveal-child core-autoload-text">Asymmetric Fluid</span></span>
+                </h1>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Descend Into the Matrix</span>
+            </div>
+        </section>
+
+        <!-- THE EDITORIAL MANIFESTO PROFILE MODULE -->
+        <section class="manifesto-section">
+            <div class="manifesto-sticky-pane">
+                <span class="meta-index-stamp">01 // IDENTITY</span>
+                <h2 class="manifesto-title reveal-parent"><span class="reveal-child scroll-driven-reveal">The Blueprint Manifest</span></h2>
+            </div>
+            <div class="manifesto-body-wrapper">
+                <p class="manifesto-core-paragraph reveal-parent">
+                    <span class="reveal-child scroll-driven-reveal">
+                        Hey! It's me <span>"Gaurab"</span>. Just an average guy trying to learn and develop something new, creative and <em>perplex</em> for me to enjoy.
+                    </span>
+                </p>
+                <p class="manifesto-secondary-details reveal-parent">
+                    <span class="reveal-child scroll-driven-reveal">
+                        Operating at the absolute intersections of structural physics frameworks, mathematical vector rendering engines, and raw aesthetic luxury guidelines. This space serves as an encrypted logs directory documenting iterative advancements across variable display systems, data-packet streams, and high-fidelity interface layers.
+                    </span>
+                </p>
+            </div>
+        </section>
+
+        <!-- THE EXPANDED 8-ITEM COMPREHENSIVE SUB-TOPICS ROW ARCHIVE MATRIX -->
+        <section class="interactive-showcase-section" id="accordion-system-anchor">
+            <div class="section-header-block">
+                <h2 class="section-title-main reveal-parent"><span class="reveal-child scroll-driven-reveal">Exploration Core<span>Sub-Topic Matrix</span></span></h2>
+                <div class="section-desc-meta">Select an archive row item node coordinate block to expand specific operational analytics files.</div>
+            </div>
+
+            <!-- UNABRIDGED EXTENSIVE ACCORDION ROW INFRASTRUCTURE SYSTEM -->
+            <div class="master-accordion-system">
+                
+                <!-- ROW UNIT 01 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">01.</span>
+                        <h3 class="node-headline">Hardware Connectivity Architecture</h3>
+                        <span class="node-category-tag">Display Networks</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Exhaustive research documentation addressing direct, hardware-level screen mirroring configurations, projection protocols, and external wireless audio/video presentation screens. This segment tracks dynamic discovery surrounding cross-platform handshakes, specifically monitoring legacy system interactions when linking independent hardware engines with central entertainment units.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Legacy System Linking</h4>
+                                    <p>Comprehensive tracing of screen motion rendering to discover operational threshold capacities across old-generation mobile chip architectures.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Hardware Protocol Map</h4>
+                                    <p>Analyzing baseline projection constraints on standard consumer displays to establish seamless, uncompressed link-states.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>System Parameters</h4>
+                                    <p>Targeting refresh tracking frequencies, output latency profiles, and video stream bitrates over local presentation pipelines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 02 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">02.</span>
+                        <h3 class="node-headline">Cross-Platform Topology Testing</h3>
+                        <span class="node-category-tag">System Diagnosis</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Running continuous stress logs comparing processing performance limits and connectivity variables across competing smartphone hardware standards. Testing focuses on identifying edge-case anomalies present inside system-level connection pipelines when negotiating display privileges between different OS frameworks on matching output displays.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Android Frameworks</h4>
+                                    <p>Evaluating native link handshakes within modern systems (such as the Samsung Galaxy A35 series) to verify automatic handshakes.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>iOS Integration Trace</h4>
+                                    <p>Isolating configuration boundaries present inside vintage device variants (e.g., iPhone 8 Plus) during wireless connection validation routines.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Failure State Diagnostics</h4>
+                                    <p>Pinpointing connection dropping variables, authentication timeout logs, and asymmetric software handoff errors across ecosystems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 03 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">03.</span>
+                        <h3 class="node-headline">Application Layer Media Engines</h3>
+                        <span class="node-category-tag">Data Streaming</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Tracking operational parameters and casting stability signatures across dedicated global stream applications. This file analyzes structural background frame adjustments made during remote device-to-screen commands to maximize video frame consistency.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>YouTube Engine Tracing</h4>
+                                    <p>Verifying active background software parameters that allow high-priority application-level casting mechanisms to succeed where base OS processes fail.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Packet Buffering Control</h4>
+                                    <p>Fine-tuning systemic data delivery schemes to limit rendering stutter on continuous media feeds.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Receiver Calibration</h4>
+                                    <p>Standardizing remote application commands to establish responsive control loops between source controllers and receiver screens.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 04 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">04.</span>
+                        <h3 class="node-headline">Asymmetric Grid Structural Mathematics</h3>
+                        <span class="node-category-tag">Layout Engineering</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Programmatic formulation calculation maps controlling absolute cross-axis displacement scaling parameters. By avoiding traditional symmetric layout loops, this setup computes real-time alignment distributions across dynamic client viewports.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Viewport Intercepts</h4>
+                                    <p>Determining scale matrices to scale layouts smoothly on any screen without relying on hard break values.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Proportion Constants</h4>
+                                    <p>Injecting golden editorial scaling properties inside standard web containers to replicate luxury print looks.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Performance Tuning</h4>
+                                    <p>Optimizing layout calculation overhead down to near-zero milliseconds by offloading matrix tasks straight to CSS layers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 05 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">05.</span>
+                        <h3 class="node-headline">High-Viscosity Canvas Simulation Fluidics</h3>
+                        <span class="node-category-tag">Physics Mathematics</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Deep dive blueprints documenting procedural wave generation algorithms, vector path computations, and linear mouse speed trackers. The math engine uses continuous sine and cosine tracking cycles to model thick liquid movement scripts.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Trigonometric Models</h4>
+                                    <p>Configuring multiple overlapping harmonic waves to build structural variance across layout background planes.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Velocity Adapters</h4>
+                                    <p>Translating live cursor track vectors into physics force variables, letting the background liquid swirl dynamically.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Chromatic Profiles</h4>
+                                    <p>Sampling micro-shifts within safe chocolate tone palettes to preserve high contrast readability across readability targets.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 06 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">06.</span>
+                        <h3 class="node-headline">Asynchronous File Verification Registry</h3>
+                        <span class="node-category-tag">Data Integration</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Maintaining backend asset verification logs tracking high-fidelity component targets, video file links, and metadata pointers. This process makes sure rich multi-media fragments render safely during system-wide layouts adjustments.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Asset Validations</h4>
+                                    <p>Enforcing absolute integrity matching across external file tracks, including media targets like video_preview_h264.mp4.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Streaming Pipes</h4>
+                                    <p>Managing localized byte-range asset transfers to eliminate initialization hitches during continuous layout render checks.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Error Safe Fallbacks</h4>
+                                    <p>Constructing explicit layout fallback trees to display alternative design vectors if media streams face network dropped states.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 07 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">07.</span>
+                        <h3 class="node-headline">Intersection Observer Typography Animations</h3>
+                        <span class="node-category-tag">Interface Design</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Constructing custom hardware-accelerated text animation systems that track viewport visibility loops via native thread engines. Text lines transform smoothly along coordinate paths based on precise layout threshold crossings.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Matrix Transitions</h4>
+                                    <p>Isolating text element bounds to execute fluid 3D transformations without triggering expensive browser structural redraw cycles.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Threshold Tracking</h4>
+                                    <p>Configuring highly sensitive viewport boundary values to trigger smooth typographic reveals exactly when user engagement hits target points.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Thread Allocation</h4>
+                                    <p>Ensuring layout processing steps drop near-zero tracking overhead by delegating layout calculations directly to background rendering layers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW UNIT 08 -->
+                <div class="luxury-accordion-node">
+                    <button class="accordion-interactive-trigger trigger-interactive-focus">
+                        <span class="node-index">08.</span>
+                        <h3 class="node-headline">Boutique Production Optimization Standards</h3>
+                        <span class="node-category-tag">System Auditing</span>
+                        <span class="node-icon-indicator"></span>
+                    </button>
+                    <div class="node-expandable-content-wrapper">
+                        <div class="node-content-internal-box">
+                            <p class="node-extended-description">
+                                Rigorous execution criteria applied to modern interface templates to secure premium performance markers, flawless fluid framerates, and elite scannability configurations across any user setup.
+                            </p>
+                            <div class="node-technical-matrix-grid">
+                                <div class="matrix-data-node">
+                                    <h4>Framerate Baselines</h4>
+                                    <p>Enforcing absolute lockstep 60Hz loop thresholds across active viewport tracking script arrays to guarantee seamless user feedback loops.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Scannability Maps</h4>
+                                    <p>Structuring clean layout visual hierarchies to distribute complex technical copy blocks into easily parsed user content grids.</p>
+                                </div>
+                                <div class="matrix-data-node">
+                                    <h4>Component Integrity</h4>
+                                    <p>Enforcing zero external framework dependencies to ensure robust code blocks remain safe against external version deprecation issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PERFORMANCE INDICATOR STATISTICS STRIP -->
+        <section class="numerical-statistics-strip">
+            <div class="stat-node-box">
+                <span class="stat-large-number">08//</span>
+                <span class="stat-label-text">Master Archive Columns Loaded</span>
+            </div>
+            <div class="stat-node-box">
+                <span class="stat-large-number">100%</span>
+                <span class="stat-label-text">Layout Acceleration Active</span>
+            </div>
+            <div class="stat-node-box">
+                <span class="stat-large-number">60hz</span>
+                <span class="stat-label-text">Locked Vector Speed</span>
+            </div>
+            <div class="stat-node-box">
+                <span class="stat-large-number">2026</span>
+                <span class="stat-label-text">Active System Directory</span>
+            </div>
+        </section>
+
+        <!-- ASYMMETRIC PHOTOGRAPHIC PIECES SECTION -->
+        <section class="curated-gallery-showcase">
+            <div class="gallery-asymmetric-grid">
+                <div class="gallery-large-image-column">
+                    <div class="gallery-image-frame trigger-interactive-focus">
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1600&q=90" alt="Abstract fluid movement visualization">
+                    </div>
+                </div>
+                <div class="gallery-small-text-column">
+                    <h3 class="gallery-caption-title reveal-parent"><span class="reveal-child scroll-driven-reveal">Viscous Density Space</span></h3>
+                    <p class="gallery-caption-body reveal-parent">
+                        <span class="reveal-child scroll-driven-reveal">
+                            The visual framework mimics complex fluid dynamics, leveraging pure HTML5 canvas mathematics to simulate thick, luxury movement patterns that map directly to procedural timeline phases.
+                        </span>
+                    </p>
+                    <a href="#accordion-system-anchor" class="gallery-action-link trigger-interactive-focus">Re-examine Structural Matrix Rows</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECONDARY BOUTIQUE LABS INTERACTIVE HUB -->
+        <section class="experimental-hub-section">
+            <div class="section-header-block">
+                <h2 class="section-title-main reveal-parent"><span class="reveal-child scroll-driven-reveal">Experimental Hub<span>Boutique Prototypes</span></span></h2>
+                <div class="section-desc-meta">Secondary pipeline registries validating alternative design patterns, asset structures, and file interactions.</div>
+            </div>
+            
+            <div class="hub-asymmetric-presentation-deck">
+                <!-- LAB NODE 01 -->
+                <div class="hub-interactive-item-card trigger-interactive-focus" onclick="alert('Accessing file reference parameters...');">
+                    <span class="hub-card-index">Module Alpha // Asset Registry</span>
+                    <h3 class="hub-card-title">video_preview_h264.mp4</h3>
+                    <p class="hub-card-abstract">
+                        Verbatim reference validation pointer map tracking original luxury asset compositions, slow-motion rendering steps, and high-viscosity fluid reference footage.
+                    </p>
+                </div>
+                <!-- LAB NODE 02 -->
+                <div class="hub-interactive-item-card trigger-interactive-focus" onclick="alert('Accessing UI framework documentation...');">
+                    <span class="hub-card-index">Module Beta // Layout Logic</span>
+                    <h3 class="hub-card-title">Asymmetric Grid Spacing</h3>
+                    <p class="hub-card-abstract">
+                        Structural configuration scripts managing layout positioning shifts to break generic web symmetry templates, inspired by top-tier publication layouts.
+                    </p>
+                </div>
+                <!-- LAB NODE 03 -->
+                <div class="hub-interactive-item-card trigger-interactive-focus" onclick="alert('Accessing canvas math constants...');">
+                    <span class="hub-card-index">Module Gamma // Physics Matrix</span>
+                    <h3 class="hub-card-title">Trigonometric Flow Models</h3>
+                    <p class="hub-card-abstract">
+                        Mathematical parameter curves regulating individual frequency scales, velocity thresholds, and phase intervals across the background molten engine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGH-FIDELITY SYSTEMS COMMUNICATIONS CONSOLE LAYER -->
+        <section class="communications-intake-section" id="contact-intake-anchor">
+            <div class="intake-sidebar-sticky">
+                <h2 class="intake-title-main reveal-parent"><span class="reveal-child scroll-driven-reveal">Initiate Secure<br><span>Dialogue Transmissions</span></span></h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; max-width: 400px;" class="reveal-parent">
+                    <span class="reveal-child scroll-driven-reveal">
+                        Have questions about specific hardware test arrays, system connection logs, or aesthetic vector engineering projects? Transmit your data profile.
+                    </span>
+                </p>
+                <div class="intake-comms-channel-list">
+                    <div class="channel-row-node">
+                        <span class="channel-row-label">Direct Digital Mail Coordinates</span>
+                        <a href="mailto:studio@gaurab.system" class="channel-row-anchor trigger-interactive-focus">studio@gaurab.system</a>
+                    </div>
+                    <div class="channel-row-node">
+                        <span class="channel-row-label">Secure Comm Hub Identity</span>
+                        <a href="#" class="channel-row-anchor trigger-interactive-focus">@gaurab.architect.labs</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIGITAL DATA INTAKE FORM ROW LAYOUT -->
+            <div class="intake-form-box">
+                <form class="intake-form-element-tree" onsubmit="event.preventDefault(); alert('Transmission securely routed to Gaurab portfolio logs.');">
+                    <div class="form-structural-node-row">
+                        <div class="form-input-wrapper-node">
+                            <span class="luxury-form-label-string">Identity String Moniker</span>
+                            <input type="text" class="luxury-monolithic-input-field trigger-interactive-focus" required placeholder="Distinguished Identity">
+                        </div>
+                        <div class="form-input-wrapper-node">
+                            <span class="luxury-form-label-string">Network Communication Anchor</span>
+                            <input type="email" class="luxury-monolithic-input-field trigger-interactive-focus" required placeholder="e.g., mail@network.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-input-wrapper-node">
+                        <span class="luxury-form-label-string">Project Intent Matrix Parameter</span>
+                        <input type="text" class="luxury-monolithic-input-field trigger-interactive-focus" required placeholder="Subject System Track ID">
+                    </div>
+
+                    <div class="form-input-wrapper-node">
+                        <span class="luxury-form-label-string">Dialogue Directive Narrative</span>
+                        <textarea class="luxury-monolithic-input-field trigger-interactive-focus" required placeholder="Write detailed project requirements, diagnostic queries, or collaboration briefs..."></textarea>
+                    </div>
+
+                    <div class="submission-trigger-container">
+                        <button type="submit" class="premium-form-submit-trigger trigger-interactive-focus">Route Secure Transmission</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- LUXURY COMPLIANCE TAIL END FOOTER SECTION -->
+        <footer>
+            <div class="footer-top-row-layout">
+                <div class="footer-brand-column">
+                    <h3>GAURAB<span>.</span></h3>
+                    <p>Building high-fidelity interactive platforms, custom mathematical simulations, and modern layout aesthetics for creative exploration.</p>
+                </div>
+                <div class="footer-links-navigation-grid">
+                    <div>
+                        <h4 class="footer-nav-col-header">Index Directory</h4>
+                        <ul class="footer-nav-link-list">
+                            <li><a href="#" class="trigger-interactive-focus">Top Cover Section</a></li>
+                            <li><a href="#accordion-system-anchor" class="trigger-interactive-focus">Sub-Topic Clusters</a></li>
+                            <li><a href="#contact-intake-anchor" class="trigger-interactive-focus">Intake Communications</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-nav-col-header">System Specifications</h4>
+                        <ul class="footer-nav-link-list">
+                            <li><a href="#" class="trigger-interactive-focus" onclick="alert('Canvas Engine Level: 60Hz Vector Fluid Loop'); return false;">Canvas Simulation Parameter</a></li>
+                            <li><a href="#" class="trigger-interactive-focus" onclick="alert('Typography Matrix Standard: Serif-Sans Balance'); return false;">Editorial Style Token Data</a></li>
+                            <li><a href="#" class="trigger-interactive-focus" onclick="alert('System Core Language: Production HTML5 Elements'); return false;">Core Platform Blueprint</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-compliance-row">
+                <span>© 2026 Gaurab Studio System Engineering. All Records Preserved.</span>
+                <span>Viscous Flow Fluid Engine v3.00</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- =========================================================================
+       18. HIGH-FIDELITY CORE INTERACTIVITY CODE MODULES
+       ========================================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* ---------------------------------------------------------------------
+               A. DIGITAL CUSTOM INTERACTIVE CURSOR CONTROLLER ENGINE
+               --------------------------------------------------------------------- */
+            const cursorDotNode = document.getElementById('cursor-dot-node');
+            const cursorRingNode = document.getElementById('cursor-ring-node');
+            
+            let pointerCoordinates = { xPosition: 0, yPosition: 0 };
+            let dotTrackingMatrix = { currentX: 0, currentY: 0 };
+            let ringTrackingMatrix = { currentX: 0, currentY: 0 };
+
+            window.addEventListener('mousemove', (mouseEvent) => {
+                pointerCoordinates.xPosition = mouseEvent.clientX;
+                pointerCoordinates.yPosition = mouseEvent.clientY;
+            });
+
+            // Fluidly interpolate spatial vectors across system cycles
+            function renderInterpolatedCursorSequence() {
+                // Immediate interpolation paths for central primary tracking dot
+                dotTrackingMatrix.currentX += (pointerCoordinates.xPosition - dotTrackingMatrix.currentX) * 0.25;
+                dotTrackingMatrix.currentY += (pointerCoordinates.yPosition - dotTrackingMatrix.currentY) * 0.25;
+                cursorDotNode.style.transform = `translate3d(${dotTrackingMatrix.currentX}px, ${dotTrackingMatrix.currentY}px, 0) translate(-50%, -50%)`;
+
+                // Lagging lazy calculation loop to model luxurious ring trailing
+                ringTrackingMatrix.currentX += (pointerCoordinates.xPosition - ringTrackingMatrix.currentX) * 0.09;
+                ringTrackingMatrix.currentY += (pointerCoordinates.yPosition - ringTrackingMatrix.currentY) * 0.09;
+                cursorRingNode.style.transform = `translate3d(${ringTrackingMatrix.currentX}px, ${ringTrackingMatrix.currentY}px, 0) translate(-50%, -50%)`;
+
+                requestAnimationFrame(renderInterpolatedCursorSequence);
+            }
+            renderInterpolatedCursorSequence();
+
+            // Bind global structural hover loops to mutate visual scale states
+            const interactiveTriggers = document.querySelectorAll('.trigger-interactive-focus');
+            interactiveTriggers.forEach(targetItem => {
+                targetItem.addEventListener('mouseenter', () => document.body.classList.add('is-hovering-interactive'));
+                targetItem.addEventListener('mouseleave', () => document.body.classList.remove('is-hovering-interactive'));
+            });
+
+
+            /* ---------------------------------------------------------------------
+               B. EXPANDED SINGLE-EXPANSION ACCORDION ROW SYSTEM CONTROLLER
+               --------------------------------------------------------------------- */
+            const accordionRows = document.querySelectorAll('.luxury-accordion-node');
+            
+            accordionRows.forEach(row => {
+                const triggerButton = row.querySelector('.accordion-interactive-trigger');
+                const slidingContentPane = row.querySelector('.node-expandable-content-wrapper');
+                
+                triggerButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const isAlreadyExpanded = row.classList.contains('is-expanded-state');
+                    
+                    // Collapse all adjacent entries to focus tracking room paths
+                    accordionRows.forEach(innerRow => {
+                        innerRow.classList.remove('is-expanded-state');
+                        innerRow.querySelector('.node-expandable-content-wrapper').style.maxHeight = null;
+                    });
+                    
+                    // If element wasn't open, calculate fresh text heights to deploy container extension
+                    if (!isAlreadyExpanded) {
+                        row.classList.add('is-expanded-state');
+                        slidingContentPane.style.maxHeight = slidingContentPane.scrollHeight + "px";
+                    }
+                });
+            });
+
+
+            /* ---------------------------------------------------------------------
+               C. PROCEDURAL MOLTEN WAVE SIMULATION GRID + INTERACTIVE CLICK RIPPLES
+               --------------------------------------------------------------------- */
+            const renderingCanvas = document.getElementById('chocolate-flow-canvas');
+            const drawContext = renderingCanvas.getContext('2d');
+
+            function executeViewportCanvasMatch() {
+                renderingCanvas.width = window.innerWidth;
+                renderingCanvas.height = window.innerHeight;
+            }
+            executeViewportCanvasMatch();
+            window.addEventListener('resize', executeViewportCanvasMatch);
+
+            // Simulation Wave Parameter Trackers
+            let fluidSimulationLayers = [
+                { verticalOffsetPercentage: 0.38, cycleSpeedClock: 0.0022, waveHeightAmplitude: 85, horizontalFrequency: 0.0040, runningPhaseTime: 0, renderHexColor: '#120705' },
+                { verticalOffsetPercentage: 0.58, cycleSpeedClock: 0.0016, waveHeightAmplitude: 120, horizontalFrequency: 0.0025, runningPhaseTime: 2.1, renderHexColor: '#1d0e0a' },
+                { verticalOffsetPercentage: 0.78, cycleSpeedClock: 0.0010, waveHeightAmplitude: 95, horizontalFrequency: 0.0035, runningPhaseTime: 4.4, renderHexColor: '#160b08' }
+            ];
+
+            let activeClickRippleParticles = [];
+            let structuralMouseMatrix = { xVelocity: 0, yVelocity: 0, trackingTargetX: 0, trackingTargetY: 0 };
+            
+            window.addEventListener('mousemove', (mouseEvent) => {
+                structuralMouseMatrix.trackingTargetX = (mouseEvent.clientX - window.innerWidth / 2) * 0.14;
+                structuralMouseMatrix.trackingTargetY = (mouseEvent.clientY - window.innerHeight / 2) * 0.14;
+            });
+
+            // Capture clicks anywhere on viewport to inject real-time physical kinetic particles
+            window.addEventListener('click', (clickEvent) => {
+                for (let count = 0; count < 12; count++) {
+                    activeClickRippleParticles.push({
+                        originX: clickEvent.clientX,
+                        originY: clickEvent.clientY,
+                        radiusScale: Math.random() * 25 + 10,
+                        angleHeading: Math.random() * Math.PI * 2,
+                        travelSpeed: Math.random() * 3 + 1,
+                        currentOpacity: 0.5,
+                        fadingSpeed: Math.random() * 0.008 + 0.004
+                    });
+                }
+            });
+
+            function executeMoltenPhysicsCalculationLoop() {
+                // Apply layout dampening routines to cursor pressure indices
+                structuralMouseMatrix.xVelocity += (structuralMouseMatrix.trackingTargetX - structuralMouseMatrix.xVelocity) * 0.05;
+                structuralMouseMatrix.yVelocity += (structuralMouseMatrix.trackingTargetY - structuralMouseMatrix.yVelocity) * 0.05;
+
+                // Clear layout drawing steps back to original absolute pitch hue
+                drawContext.fillStyle = '#0e0605';
+                drawContext.fillRect(0, 0, renderingCanvas.width, renderingCanvas.height);
+
+                // Run structural loop iterations to compute individual wave paths
+                fluidSimulationLayers.forEach(waveTrack => {
+                    drawContext.fillStyle = waveTrack.renderHexColor;
+                    drawContext.beginPath();
+                    drawContext.moveTo(0, renderingCanvas.height);
+
+                    for (let xCoord = 0; xCoord <= renderingCanvas.width; xCoord += 20) {
+                        let totalSinWaveResult = Math.sin(xCoord * waveTrack.horizontalFrequency + waveTrack.runningPhaseTime) * waveTrack.waveHeightAmplitude;
+                        let secondaryCosHarmonic = Math.cos(xCoord * 0.0012 + waveTrack.runningPhaseTime * 0.35) * (waveTrack.waveHeightAmplitude * 0.4);
+                        
+                        let compiledYCoordinate = (renderingCanvas.height * waveTrack.verticalOffsetPercentage) + 
+                                                  totalSinWaveResult + 
+                                                  secondaryCosHarmonic + 
+                                                  (structuralMouseMatrix.yVelocity * (waveTrack.verticalOffsetPercentage * 1.5));
+
+                        drawContext.lineTo(xCoord, compiledYCoordinate);
+                    }
+
+                    drawContext.lineTo(renderingCanvas.width, renderingCanvas.height);
+                    drawContext.closePath();
+                    drawContext.fill();
+
+                    waveTrack.runningPhaseTime += waveTrack.cycleSpeedClock + (Math.abs(structuralMouseMatrix.xVelocity) * 0.0003);
+                });
+
+                // Compute interactive particle displacement steps inside active loops
+                for (let index = activeClickRippleParticles.length - 1; index >= 0; index--) {
+                    let particleNode = activeClickRippleParticles[index];
+                    
+                    // Track coordinate position changes using polar vectors
+                    particleNode.originX += Math.cos(particleNode.angleHeading) * particleNode.travelSpeed;
+                    particleNode.originY += Math.sin(particleNode.angleHeading) * particleNode.travelSpeed;
+                    particleNode.currentOpacity -= particleNode.fadingSpeed;
+                    particleNode.radiusScale += 0.2;
+
+                    if (particleNode.currentOpacity <= 0) {
+                        activeClickRippleParticles.splice(index, 1);
+                        continue;
+                    }
+
+                    drawContext.beginPath();
+                    drawContext.arc(particleNode.originX, particleNode.originY, particleNode.radiusScale, 0, Math.PI * 2);
+                    drawContext.fillStyle = `rgba(223, 183, 60, ${particleNode.currentOpacity})`;
+                    drawContext.fill();
+                }
+
+                requestAnimationFrame(executeMoltenPhysicsCalculationLoop);
+            }
+            executeMoltenPhysicsCalculationLoop();
+
+
+            /* ---------------------------------------------------------------------
+               D. HIGH PERFORMANCE INTERSECTION OBSERVATION TEXT ANIMATOR
+               --------------------------------------------------------------------- */
+            const structuralRevealElements = document.querySelectorAll('.scroll-driven-reveal');
+            
+            const editorialObserverConfiguration = {
+                root: null,
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const intersectionObserverEngine = new IntersectionObserver((observedEntries, targetObserver) => {
+                observedEntries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-triggered-visible');
+                        // Unbind immediately once tracking transitions conclude safely
+                        targetObserver.unobserve(entry.target);
+                    }
+                });
+            }, editorialObserverConfiguration);
+
+            structuralRevealElements.forEach(textBlock => intersectionObserverEngine.observe(textBlock));
+
+            // Instant auto-trigger tracking mechanics setup for initial hero fold views
+            setTimeout(() => {
+                document.querySelectorAll('.core-autoload-text').forEach(heroNode => {
+                    heroNode.classList.add('is-triggered-visible');
+                });
+            }, 300);
+
+
+            /* ---------------------------------------------------------------------
+               E. CORE SMOOTH LOGO RESET INTERCEPT METHOD
+               --------------------------------------------------------------------- */
+            document.getElementById('ui-anchor-logo').addEventListener('click', (anchorClickEvent) => {
+                anchorClickEvent.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
